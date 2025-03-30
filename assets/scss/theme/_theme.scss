@@ -1,0 +1,350 @@
+@use '../utils' as *;
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Omio - Creative Personal Portfolio HTML Template 
+    Author: WebTend
+    Template URI: https://webtend.net/demo/html/omio/
+    Author URI:  https://webtend.net/
+    Description: Omio - Creative Personal Portfolio HTML Template   
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. THEME CSS
+	-----------------
+		1.1 Theme Default
+		1.2 Common Classes
+		1.3 Default Spacing
+		
+	-----------------
+    02. COMPONENTS CSS
+	-----------------
+		2.1 Accordion
+		2.2 Animations
+		2.3 Background 
+		2.4 Back to top
+		2.5 Breadcrumb
+		2.6 Buttons
+		2.7 Carousel
+		2.8 Contact Form
+		2.9 cursor
+		2.10 Hotspot
+		2.11 Hover Animation
+		2.12 Nice Select
+		2.13 Offcanvas
+		2.14 Pagination
+		2.15 Preloader
+		2.16 Search
+		2.17 Section Title
+		2.18 Tab
+
+	-----------------
+    03. HEADER CSS
+	-----------------
+		3.1 Header Style 1
+		3.2 Header Style 2
+		3.3 Header Style 3
+		3.4 Header Style 4
+
+    ---------------------------------
+	04. MENU CSS
+	---------------------------------
+		4.1 Meanmenu Css
+		4.2 Main menu Css
+		4.3 Mobile Css
+
+	---------------------------------
+	05. BLOG CSS
+	---------------------------------
+		5.1 Blog Css
+		5.2 Postbox Css
+		5.3 Recent Post Css
+		5.4 Sidebar Css
+
+	---------------------------------
+	06. FOOTER CSS
+	---------------------------------
+		6.1 Footer Style 1
+		6.2 Footer Style 2
+		6.3 Footer Style 3
+		6.4 Footer Style 4
+	---------------------------------
+	07. PAGES CSS
+	---------------------------------
+		7.1 About Css
+		7.2 Brand Css
+		7.3 Error Css
+		7.4 Exprience Css
+		7.5 Hero Css
+		7.6 Maps Css
+		7.7 Maquee Css
+		7.8 Portfolio Css
+		7.9 Pricing Css
+		7.10 Process Css
+		7.11 Project Css
+		7.12 Rusume Css
+		7.13 Service Css
+		7.14 Skill Css
+		7.15 Team Css
+		7.16 Testimonial Css
+	
+
+**********************************************/
+
+
+
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+
+
+@import url($font-url);
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*---------------------------------
+	typography css start 
+---------------------------------*/
+
+
+
+body {
+	background-color: var(--wt-common-black);
+	color: var(--wt-text-body);
+	font-size: var(--wt-fz-p);
+	font-family: var(--wt-ff-p);
+	font-weight: var(--wt-fw-regular);
+	line-height: 30px;
+	&.grey-bg {
+		background: var(--wt-common-black-secondary);
+	}
+}
+
+a{
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--wt-common-white);
+	font-weight: var(--wt-fw-bold);
+	font-family: var(--wt-ff-heading);
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	margin-top: 0px;
+}
+
+h1 {
+	font-size: 80px;
+}
+  
+h2 {
+font-size: 60px;
+}
+
+h3 {
+font-size: 50px;
+}
+
+h4 {
+font-size: var(--wt-fz-h4);
+}
+
+h5 {
+font-size: var(--wt-fz-h5);
+}
+
+h6 {
+font-size: var(--wt-fz-p);
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	font-family: var(--wt-ff-p);
+	font-size: var(--wt-fz-p);
+	              font-weight: var(--wt-fw-regular);
+	color: var(--wt-text-body);
+	margin-bottom: 15px;
+	line-height: 30px;
+}
+
+
+a,
+button,
+p,
+input,
+select,
+textarea,
+li,
+.transition-3{
+	@extend %transition;
+}
+
+a:not([href]):not([class]), 
+a:not([href]):not([class]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover{
+	color: inherit;
+	text-decoration: none;
+}
+
+
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+button:focus{
+    outline: 0; 
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+textarea{
+	outline: none;
+	background-color: #fff;
+	height: 60px;
+	width: 100%;
+	line-height: 56px;
+	font-size: 14px;
+	color: var(--wt-common-black);
+	padding-left: 26px;
+	padding-right: 26px;
+	border: 1px solid #E0E2E3;
+
+	@include placeholder{
+		color: #95999D;
+	}
+	@include rtl{
+		text-align: right;
+	}
+
+	&:focus{
+		border-color: var(--wt-theme-primary);
+		&::placeholder{
+			opacity: 0;
+		}
+	}
+
+}
+
+textarea{
+	line-height: 1.4;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+
+input[type="color"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	border-radius: 50%;
+}
+
+*::-moz-selection {
+	background: var(--wt-common-black);
+	color: var(--wt-common-white);
+	text-shadow: none;
+}
+::-moz-selection {
+	background: var(--wt-common-black);
+	color: var(--wt-common-white);
+	text-shadow: none;
+}
+::selection {
+	background: var(--wt-common-black);
+	color: var(--wt-common-white);
+	text-shadow: none;
+}
+
+
+*::-moz-placeholder {
+	color: var(--wt-common-black);
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: var(--wt-common-black);
+	font-size: 14px;
+	opacity: 1;
+}
+
+.gx-20{
+	--bs-gutter-x: 20px;
+}
+
+
+
+.coustom-container-faq-inner {
+	max-width: 1170px;
+	@media #{$lg} {
+		max-width: 900px;
+	}
+	@media #{$md} {
+		max-width: 700px;
+	}
+	@media #{$xs} {
+		max-width: 360px;
+	}
+	@media #{$xs} {
+		max-width: 520px;
+	}
+}
+
+
+
+// body {
+// 	border-right: 2px solid red;
+// }

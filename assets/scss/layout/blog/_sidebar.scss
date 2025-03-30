@@ -1,0 +1,121 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*   5.4 Sidebar Css
+/*----------------------------------------*/
+
+
+  // multiple 
+  .widget {
+        &:not(:last-child) {
+             margin-bottom: 50px;
+        }
+        &-title {
+             font-size: 30px;
+             letter-spacing: -0.02em;
+             text-transform: uppercase;
+             margin-bottom: 20px;
+        }
+     }
+   
+   
+   // search
+   .widget-search {
+     & form {
+       position: relative;
+       & input {
+         background: rgba(255, 255, 255, 0.05);
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         color: var(--wt-common-white);
+         &:focus {
+           box-shadow: none;
+           border: 1px solid var(--wt-theme-primary-4);
+         }
+       }
+       & button {
+           position: absolute;
+           top: 50%;
+           right: 20px;
+           transform: translateY(-50%);
+       }
+     }
+   }
+   
+   
+   
+   // category
+   .widget-category {
+     & li {
+       font-weight: var(--wt-fw-medium);
+       list-style: none;
+       &:not(:last-child) {
+         margin-bottom: 10px;
+       }
+       & a {
+         display: flex;
+         justify-content: space-between;
+         background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+         background-position: 0 100%;
+         background-repeat: no-repeat;
+         background-size: 0 1px;
+         transition: all 0.3s, background-size 0.8s;
+         &:hover {
+           color: var(--wt-theme-primary-4);
+           background-size: 100% 1px;
+         }
+       }
+     }
+   }
+   
+   
+   
+   // info
+   .widget-info {
+        background: var(--wt-theme-primary-4);
+     &-wrap {
+       padding: 0 5px 0 30px;
+     }
+     &-content {
+       max-width: 186px;
+       width: 100%;
+       padding: 32px 0 30px;
+       & h4 {
+         color: var(--wt-common-black);
+         font-size: 30px;
+         margin-bottom: 30px;    
+       }
+     }
+     &-shape {
+       &-1 {
+         position: absolute;
+         bottom: 0;
+         right: 5px;
+         z-index: -1;
+       }
+       &-2 {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         z-index: -2;
+       }
+     }
+     &-button {
+       & .wt-btn-circle {
+           width: 65px;
+           height: 65px;
+           color: var(--wt-common-black);
+           border: 1px solid var(--wt-common-black);
+           & .wt-btn-circle-dot {
+             background-color: var(--wt-common-black);
+           }
+           & .wt-btn-circle-icon i {
+             transition: .4s;
+           }
+           &:hover {
+             & .wt-btn-circle-icon i {
+               color: var(--wt-common-white);
+             }
+           }
+       }
+     }
+   }

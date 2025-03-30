@@ -1,0 +1,178 @@
+@use '../../utils'as *;
+
+
+/*----------------------------------------*/
+/*   7.12 Rusume Css 
+/*----------------------------------------*/
+
+
+.wt-resume {
+
+     // Home 2 Scss
+
+     &-2 {
+          &-area {
+               background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 100%);
+               padding: 140px 0 120px;
+               margin: 0 70px 0;
+               position: relative;
+               z-index: 1;
+               @media #{$lg} {
+                    margin: 0;
+               }
+               @media #{$md,$xs} {
+                    padding: 70px 0 70px;
+                    margin: 0;
+               }
+               &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1000px;
+                    height: 488px;
+                    right: 0;
+                    bottom: 0;
+                    mask-image: url(../img/resume/resume-bg-shape.svg);
+                    background: var(--wt-theme-primary);
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                    mask-size: contain;
+                    backdrop-filter: blur(300px);
+                    z-index: -1;
+                    @media #{$md} {
+                         width: 880px;
+                         height: 427px;
+                    }
+               }
+               & .wt-section-2-descr {
+                    max-width: 325px;
+               }
+          }
+          &-thumb {
+               max-width: 410px;
+               width: 100%;
+               height: 600px;
+               margin-left: auto;
+               @media #{$md} {
+                    margin: auto;
+               }
+               @media #{$xs} {
+                    margin-top: 0;
+                    height: 450px;
+               }
+               & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+               }
+          }
+          &-section-wrapper {
+               margin-left: 220px;
+               @media #{$xl} {
+                    margin-left: 100px;
+               }
+               @media #{$lg,$md,$xs} {
+                    margin-left: 0;
+               }
+          }
+          &-wrapper {
+               margin-top: -180px;
+               margin-left: 110px;
+               @media #{$lg} {
+                    margin-left: 0;
+               }
+               @media #{$md} {
+                    margin-left: 0;
+                    margin-top: 60px;
+               }
+               @media #{$xs} {
+                    margin-left: 0;
+                    margin-top: 40px;
+               }
+          }
+          &-shape-thumb {
+               margin-left: 60px;
+               margin-top: -95px;
+               text-align: center;
+               @media #{$lg} {
+                    margin-left: 0;
+               }
+               @media #{$md} {
+                    margin-left: 0;
+                    margin-top: 0;
+               }
+               @media #{$xs} {
+                    margin-left: 0;
+                    margin-top: 0;
+               }
+               & img {
+                    animation: bounce-thum-2 1s ease-in-out 0.1s forwards infinite alternate;
+                    @media #{$xs} {
+                         width: 100%;
+                    }
+               }
+          }
+
+          // tabs scss
+
+          &-tab-nav-tabs {
+               border-bottom: none;
+               --bs-nav-tabs-border-radius: 0;
+               --bs-nav-link-color: var(--wt-common-white);
+               --bs-nav-link-hover-color: var(--wt-common-white);
+          }
+          &-tab-nav-item {
+               --bs-nav-tabs-link-active-bg: transparent;
+               --bs-nav-tabs-link-active-color: var(--wt-common-white);
+               font-family: var(--wt-ff-heading);
+               font-weight: var(--wt-fw-bold);
+               font-size: 24px;
+               text-transform: uppercase;
+               margin-right: 20px;
+          }
+          &-tab-nav-link {
+               text-transform: uppercase;
+               border: 1px solid rgba(255, 255, 255, 0.1) !important;
+               padding: 13px 28px;
+               @media #{$xs} {
+                    padding: 12px 24px;
+               }
+               &.active {
+                    border-color: var(--wt-common-white) !important;
+               }
+               &:hover {
+                    border-color: none;
+               }
+          }
+          &-tab-item {
+               background: var(--wt-common-black);
+               border: 1px solid rgba(255, 255, 255, 0.07);
+               padding: 23px 80px 24px 52px;
+               margin-bottom: 10px;
+               transition: 0.5s;
+               @media #{$xl} {
+                    padding: 23px 30px 12px 30px;
+               }
+               &:hover {
+                    background: rgba(255, 255, 255, 0.05);
+               }
+          }
+          &-tab-date {
+               & span {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 4px;
+               }
+          }
+          &-tab-title {
+               margin-bottom: 12px;
+          }
+          &-tab-subtitle {
+               font-family: var(--wt-ff-body);
+               font-weight: var(--wt-fw-medium);
+               font-size: 16px;
+               margin-bottom: 33px;
+               text-transform: capitalize;
+          }
+     }
+}

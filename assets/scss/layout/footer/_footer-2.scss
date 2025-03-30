@@ -1,0 +1,126 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*   6.2 Footer Style 2
+/*----------------------------------------*/
+
+.wt-footer {
+     &-2 {
+          &-area {
+               position: relative;
+               z-index: 1;
+               &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1000px;
+                    height: 528px;
+                    left: 0;
+                    bottom: -10%;
+                    mask-image: url(../img/service/service-2-bg-shape.svg);
+                    background: var(--wt-theme-primary);
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                    mask-size: contain;
+                    backdrop-filter: blur(300px);
+                    z-index: -1;
+                    @media #{$xs} {
+                         bottom: -24%;
+                    }
+               }
+               & .wt-section-title {
+                    @media #{$lg} {
+                         font-size: 90px;
+                    }
+                    @media #{$md} {
+                         font-size: 66px;
+                    }
+               }
+          }
+          &-top {
+               background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+               padding: 80px 0 50px;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+               @media #{$md,$sm,$xs} {
+                    padding: 40px 0 20px;
+               }
+          }
+          &-center {
+               padding: 120px 0 50px;
+               @media #{$md,$sm,$xs} {
+                    padding: 70px 0 50px;
+               }
+          }
+          &-social {
+               transform: translateX(-25px);
+               margin-top: 22px;
+               @media #{$sm} {
+                    margin-bottom: 40px;
+               }
+               & ul {
+                    & li {
+                         & a {
+                              &:hover {
+                                   border: 1px solid rgba(255, 255, 255, 1);
+                              }
+                         }
+                    }
+               }
+          }
+          &-widget-menu {
+               display: flex;
+               justify-content: end;
+               margin-top: 22px;
+               @media #{$xl} {
+                    justify-content: center;
+               }
+               @media #{$lg} {
+                    justify-content: left;
+               }
+               @media #{$xs} {
+                    position: absolute;
+                    right: 25px;
+                    top: 30%;
+               }
+
+          }
+          &-widget-mail {
+               & h6 {
+                    color: var(--wt-common-white);
+                    margin-bottom: 24px;
+                    @media #{$xs} {
+                         font-size: 16px;
+                    }
+               }
+               & a {
+                    color: var(--wt-common-white);
+                    @media #{$xs} {
+                         font-size: 32px;
+                    }
+               }
+          }
+          &-bottom {
+               padding-bottom: 40px;
+          }
+          &-animated-title {
+               opacity: .3 !important;
+          }
+          &-shape {
+               &-1 {
+                    position: absolute;
+                    bottom: 23%;
+                    right: 19%;
+                    width: 280px;
+                    animation: bounce-thum-2 1s ease-in-out 0.1s forwards infinite alternate;
+                    z-index: -1;
+                    @media #{$md} {
+                         bottom: 10%;
+                    }
+                    @media #{$xs} {
+                         display: none;
+                    }
+               }
+          }
+
+     }
+}
+

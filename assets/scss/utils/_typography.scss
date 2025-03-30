@@ -1,0 +1,47 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap';
+
+// font family
+$font-family: (
+    'ff': (
+        'body': '"Hanken Grotesk", sans-serif',
+        'heading': '"Barlow Condensed", sans-serif',
+        'p': '"Hanken Grotesk", sans-serif',
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+
+// font size
+$font-size: (
+    'fz': (
+        'body': 16px,
+        'p': 16px,
+	   'h1': 74px,
+	   'h2': 48px,
+	   'h3': 38px,
+	   'h4': 24px,
+	   'h5': 20px,
+	   'h6': 16px,
+    )
+);
+
+
+// Font Weight
+$font-scale: (
+	'fw': (
+		'normal': normal,
+		'thin': 100,
+		'elight': 200,
+		'light': 300,
+		'regular': 400,
+		'medium': 500,
+		'sbold': 600,
+		'bold': 700,
+		'ebold': 800,
+		'black': 900,
+	),
+);
+

@@ -1,0 +1,33 @@
+@use '../../utils' as *;
+
+
+
+/*----------------------------------------*/
+/*  7.6 Maps Css 
+/*----------------------------------------*/
+
+.wt-maps {
+     &-area {
+          padding-bottom: 130px;
+         overflow: hidden;
+     }
+     &-wrapper {
+         position: relative;
+         top: 10px;
+         iframe {
+            width: 100%;
+            min-height: 715px;
+         }
+         @media #{$md, $sm, $xs} {
+            iframe {
+               width: 100%;
+               min-height: 620px;
+            }
+         }
+     }
+}
+
+
+
+
+

@@ -1,0 +1,219 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*   6.1 Footer Style 1
+/*----------------------------------------*/
+
+.wt-footer {
+     &-area {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+          margin: 0 70px 0;
+          padding: 130px 0 80px;
+          position: relative;
+          z-index: 1;
+          @media #{$xl} {
+               margin: 0 30px 0;
+          }
+          @media #{$lg,$md,$sm,$xs} {
+               margin: 0;
+          }
+          @media #{$md,$xs} {
+               padding: 15px 0 20px;
+          }
+          &::after {
+               content: "";
+               position: absolute;
+               width: 1450px;
+               height: 790px;
+               bottom: -120px;
+               right: -240px;
+               mask-image: url(../img/footer/footer-shape.svg);
+               background: #340f5b;
+               mask-repeat: no-repeat;
+               mask-position: center;
+               mask-size: contain;
+               backdrop-filter: blur(80px);
+               z-index: -1;
+          }
+          & .wt-about-bottom-content {
+               margin-top: -44px;
+          }
+     }
+     &-info {
+          @media #{$lg} {
+               margin-top: 0;
+          }
+     }
+     &-widget{
+          &-top {
+               margin-left: -50px;
+               @media #{$xs} {
+                    margin-left: 0;
+               }
+               & .wt-section-title {
+                    @media #{$lg} {
+                         font-size: 74px;
+                    }
+                    & br {
+                         @media #{$lg,$md,$sm,$xs} {
+                              display: none;
+                         }
+                    }
+               }
+          }
+          &-border {
+               width: 2px;
+               height: 100px;
+               background: var(--wt-common-white);
+               margin: auto;
+               margin-bottom: 52px;
+          }
+          &-mail {
+               margin-bottom: 40px;
+               & h6 {
+                    font-weight: var(--wt-fw-bold);
+                    font-size: 24px;
+                    letter-spacing: -0.03em;
+                    color: var(--wt-text-p);
+                    font-family: var(--wt-ff-p);
+                    margin-bottom: 34px;
+               }
+               & a {
+                    font-weight: var(--wt-fw-sbold);
+                    font-size: 44px;
+                    letter-spacing: -0.03em;
+                    background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+                    background-position: 0 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0 1px;
+                    transition: all 0.3s, background-size 0.8s;
+                    &:hover {
+                        background-size: 100% 1px;
+                    }
+                    @media #{$xs} {
+                         font-size: 32px;
+                    }
+               }
+          }
+          &-menu {
+               @media #{$xl,$lg} {
+                    margin-left: -30px;
+               }
+               @media #{$md} {
+                    position: absolute;
+                    top: 4%;
+                    right: 5%;
+               }
+               @media #{$xs} {
+                    position: absolute;
+                    top: 4%;
+                    right: 6%;
+               }
+               & .wt-header-menu {
+                    @media #{$lg} {
+                         margin-top: 0;
+                    }
+                    & ul {
+                         & li {
+                              & .submenu {
+                                   @media #{$md,$xs} {
+                                        background: var(--wt-common-black);
+                                        padding-left: 16px;
+                                        width: 105px;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     &-right-social {
+          & ul {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              row-gap: 10px;
+              flex-wrap: wrap;
+              & li {
+                    line-height: 1;
+                    &:last-child {
+                         margin-right: 0;
+                    } 
+                    & a {
+                         display: inline-flex;
+                         align-items: center;
+                         justify-content: center;
+                         transition: all 0.4s ease-in-out 0s;
+                         border: 1px solid rgba(255, 255, 255, 0.07);
+                         background: transparent;
+                         padding: 8px 18px 11px;
+                         margin-right: 20px;
+                         border-radius: 20px;
+                         color: var(--wt-text-p);
+                         
+                         @media #{$xl} {
+                              padding: 8px 14px;
+                              margin-right: 7px;
+                              font-size: 14px;
+                         }
+                         & .active-media {
+                              transition: all 0.7s ease-in-out;
+                              transform: translateY(0%);
+                         }
+                         & .hover-media {
+                              display: inline-flex;
+                              align-items: center;
+                              justify-content: center;
+                              width: 35px;
+                              height: 35px;
+                              line-height: 1;
+                              font-size: 16px;
+                              opacity: 0;
+                              visibility: hidden;
+                              transition: all 0.7s ease-in-out;
+                              transform: translateY(30%);
+                              border-radius: 50%;
+                              position: absolute;
+                              & i {
+                                   position: relative;
+                                   left: 1px;
+                              }
+                         }
+                         &:hover {
+                              .active-media {
+                                   opacity: 0;
+                                   visibility: hidden;
+                                   transition: all 0.3s ease-in-out;
+                                   transform: translateY(-100%);
+                              }
+                              .hover-media {
+                                   opacity: 1;
+                                   visibility: visible;
+                                   transform: translateY(0);
+                              }
+                         }
+                    }
+              }
+          }
+     }
+     &-copyright{
+          &-pagaraph {
+               & a {
+                    background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+                    background-position: 0 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0 1px;
+                    transition: all 0.3s, background-size 0.8s;
+                    &:hover {
+                        background-size: 100% 1px;
+                        color: var(--wt-common-white);
+                        font-weight: var(--wt-fw-bold);
+                    }
+               }
+          }
+     }
+}
+

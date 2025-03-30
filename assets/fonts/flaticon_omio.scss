@@ -1,0 +1,69 @@
+$flaticon_omio-font: "flaticon_omio";
+
+@font-face {
+    font-family: $flaticon_omio-font;
+    src: url("./flaticon_omio.woff2?6ddbcb91cdfac56e08d232bccfcea8c7") format("woff2"),
+url("./flaticon_omio.woff?6ddbcb91cdfac56e08d232bccfcea8c7") format("woff"),
+url("./flaticon_omio.eot?6ddbcb91cdfac56e08d232bccfcea8c7#iefix") format("embedded-opentype"),
+url("./flaticon_omio.ttf?6ddbcb91cdfac56e08d232bccfcea8c7") format("truetype"),
+url("./flaticon_omio.svg?6ddbcb91cdfac56e08d232bccfcea8c7#flaticon_omio") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_omio !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_omio-map: (
+    "check-mark": "\f101",
+    "idea": "\f102",
+    "vector": "\f103",
+    "web-designing": "\f104",
+    "editor": "\f105",
+    "asterisk": "\f106",
+    "email-marketing": "\f107",
+    "sustainability": "\f108",
+    "double-quotes": "\f109",
+    "add": "\f10a",
+    "ads": "\f10b",
+);
+
+.flaticon-check-mark:before {
+    content: map-get($flaticon_omio-map, "check-mark");
+}
+.flaticon-idea:before {
+    content: map-get($flaticon_omio-map, "idea");
+}
+.flaticon-vector:before {
+    content: map-get($flaticon_omio-map, "vector");
+}
+.flaticon-web-designing:before {
+    content: map-get($flaticon_omio-map, "web-designing");
+}
+.flaticon-editor:before {
+    content: map-get($flaticon_omio-map, "editor");
+}
+.flaticon-asterisk:before {
+    content: map-get($flaticon_omio-map, "asterisk");
+}
+.flaticon-email-marketing:before {
+    content: map-get($flaticon_omio-map, "email-marketing");
+}
+.flaticon-sustainability:before {
+    content: map-get($flaticon_omio-map, "sustainability");
+}
+.flaticon-double-quotes:before {
+    content: map-get($flaticon_omio-map, "double-quotes");
+}
+.flaticon-add:before {
+    content: map-get($flaticon_omio-map, "add");
+}
+.flaticon-ads:before {
+    content: map-get($flaticon_omio-map, "ads");
+}

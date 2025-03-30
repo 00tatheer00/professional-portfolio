@@ -1,0 +1,141 @@
+@use '../../utils'as *;
+
+
+/*----------------------------------------*/
+/*   7.14 Skill Css */ 
+/*----------------------------------------*/
+
+
+.wt-skill {
+
+     // Home 2 Scss
+
+     &-2 {
+          &-area {
+               padding: 130px 0 100px;
+               @media #{$md,$xs} {
+                    padding: 70px 0 60px;
+               }
+               position: relative;
+               z-index: 1;
+               & .wt-section-2-descr {
+                    max-width: 300px;
+               }
+          }
+          &-wrapper {
+               background: #1f1f1f;
+               border-radius: 95px;
+               padding: 60px 0 32px;
+               margin-bottom: 30px;
+               text-align: center;
+          }
+          &-thumb {
+               margin-bottom: 16px;
+               @media #{$xl} {
+                    margin-left: -20px;
+               }
+               @media #{$md} {
+                    margin-bottom: 60px;
+                    margin-top: -30px;
+               }
+               & img {
+                    animation: bounce-thum-2 1s ease-in-out 0.1s forwards infinite alternate;
+                    @media #{$xs} {
+                         max-width: 300px;
+                         margin-bottom: 40px;
+                    }
+               }
+          }
+          &-counter-title {
+               font-family: var(--wt-ff-heading);
+               font-weight: 600;
+               font-size: 55px;
+          }
+
+     }
+
+     // Home 2 Scss
+
+     &-4 {
+          &-area {
+               padding: 0 0 130px;
+               @media #{$md,$xs} {
+                    padding: 0 0 80px;
+               }
+               .progress-lavel {
+                    font-family: var(--wt-ff-heading);
+                    font-weight: var(--wt-fw-sbold);
+                    font-size: 27px;
+                    letter-spacing: -0.02em;
+                    text-transform: uppercase;
+                    color: var(--wt-common-white);
+                    margin-bottom: 28px;
+               }
+               .progress-item {
+                    position: relative;
+                    background: var(--wt-common-white);
+                    margin-top: 20px;
+                    z-index: 1;
+                    .item_value {
+                         position: absolute;
+                         top: -50px;
+                         right: 0;
+                         font-family: var(--wt-ff-heading);
+                         font-weight: 600;
+                         font-size: 27px;
+                         letter-spacing: -0.02em;
+                         text-transform: uppercase;
+                         color: var(--wt-common-white);
+                    }
+                    .item_bar {
+                         position: relative;
+                         height: 2px;
+                         background-color: rgba(255, 255, 255, 0.2);
+                         .progress {
+                              position: absolute;
+                              left: 0;
+                              top: 50%;
+                              bottom: 0;
+                              width: 0;
+                              height: 4px;
+                              margin: 0;
+                              transform: translateY(-50%);
+                              border-radius: 0px;
+                              overflow: visible;
+                              background-color: var(--wt-theme-primary-4);
+                              transition: width 100ms ease;
+                         }
+                    }
+               }
+
+          }
+          &-left {
+               margin-right: 128px;
+               @media #{$xl} {
+                    margin-right: 0;
+               }
+               @media #{$lg} {
+                    margin-bottom: 40px;
+               }
+               @media #{$md} {
+                    margin-right: 0;
+                    margin-bottom: 40px;
+               }
+               @media #{$xs} {
+                    margin-right: 0;
+                    margin-bottom: 40px;
+               }
+          }
+          &-item {
+               margin-bottom: 44px;
+               &:last-child {
+                    margin-bottom: 0;
+               }
+          }
+          &-thumb {
+               margin-left: auto;
+          }
+     }
+
+}
+

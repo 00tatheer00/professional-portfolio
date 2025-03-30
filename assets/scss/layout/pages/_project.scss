@@ -1,0 +1,338 @@
+@use '../../utils'as *;
+
+
+/*----------------------------------------*/
+/*   7.11 Project Css 
+/*----------------------------------------*/
+
+
+.wt-project {
+     &-area {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+          padding: 140px 0 132px;
+          margin: 0 70px;
+          @media #{$xl} {
+               margin: 0 30px;
+          }
+          @media #{$lg} {
+               margin: 0 0;
+          }
+          @media #{$md,$xs} {
+               padding: 65px 0 65px;
+               margin: 0 0;
+          }
+     }
+     &-item {
+          position: relative;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+          &:first-child {
+               border-top: 1px solid rgba(255, 255, 255, 0.07);
+          }
+          &:hover {
+               & .wt-project-action {
+                    & span {
+                         // background: var(--wt-common-black);
+                         // color: var(--wt-common-white);
+                         border: 1px solid rgb(255, 255, 255);
+                    }
+                    &.blog-action {
+                         & span {
+                             border: 1px solid var(--wt-common-white);
+                             background: transparent;
+                         }
+                    }
+               }
+          }
+          & .wt-hover-reveal-bg {
+               background-size: inherit;
+               background-position: center;
+               background-repeat: no-repeat;
+          }
+     }
+     &-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 26px 28px;
+          transition: 0.3s;
+          @media #{$xs} {
+               row-gap: 15px;
+               display: flex;
+               padding: 26px 10px;
+          }
+          &.wt-blog-4-content {
+               padding-left: 0;
+               padding-right: 0;
+          }
+     }
+     &-title {
+          font-size: 85px;
+          letter-spacing: -0.03em;
+          max-width: 480px;
+          width: 100%;
+          @media #{$xl} {
+               font-size: 70px;
+               max-width: 428px;
+          }
+          @media #{$lg} {
+               font-size: 50px;
+               max-width: 340px;
+          }
+          @media #{$md} {
+               font-size: 36px;
+               max-width: 190px;
+          }
+          @media #{$xs} {
+               font-size: 30px;
+               max-width: 160px;
+          }
+          @media #{$sm} {
+               max-width: 158px;
+          }
+     }
+     &-tag {
+          font-family: var(--wt-ff-body);
+          font-size: 20px;
+          color: var(--wt-text-p);
+          max-width: 465px;
+          width: 100%;
+          @media #{$xs} {
+               font-size: 16px;
+          }
+          @media #{$xs} {
+               font-size: 16px;
+               max-width: 190px;
+          }
+          @media #{$sm} {
+               max-width: 200px;
+          }
+     }
+     &-action {
+          @media #{$md} {
+               transform: translateY(-25px);
+          }
+          @media #{$xs} {
+               transform: translateY(-29px);
+          }
+          @media #{$sm} {
+               transform: translateY(0);
+          }
+          & span {
+               width: 60px;
+               height: 60px;
+               line-height: 1;
+               display: inline-flex;
+               justify-content: center;
+               align-items: center;
+               border: 1px solid rgba(255, 255, 255, 0.07);
+               border-radius: 50%;
+               transition: .4s;
+          }
+          &.blog-action  {
+               @media #{$md} {
+                    transform: translateY(0);
+               }
+               @media #{$xs} {
+                    transform: translateY(0);
+               }
+          }
+     }
+
+
+     // Home 2 Scss
+
+
+     &-2 {
+          &-area {
+               padding: 0 0 132px;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+               @media #{$md,$xs} {
+                    padding: 0 0 80px;
+               }
+               & .row.mb-30 {
+                    @media #{$xs} {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          &-item {
+               margin-bottom: 70px;
+               @media #{$xs} {
+                    margin-bottom: 30px
+               }
+               &.mt-50 {
+                    @media #{$md,$xs} {
+                         margin-top: 0;
+                    }
+               }
+          }
+          &-thumb {
+               margin-bottom: 28px;
+               & img {
+                    width: 100%;
+               }
+          }
+          &-subtitle {
+               font-weight: var(--wt-fw-regular);
+               line-height: 1.87;
+               color: var(--wt-text-p);
+               font-family: var(--wt-ff-body);
+               margin-bottom: 0;
+          }
+          &-title {
+               font-size: 30px;
+               background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+               background-position: 0 100%;
+               background-repeat: no-repeat;
+               background-size: 0 1px;
+               transition: all 0.3s, background-size 0.8s;
+               display: inline-block;
+               @media #{$md} {
+                    font-size: 24px;
+               }
+               &:hover {
+                   background-size: 100% 1px;
+               }
+          }
+          &-button {
+               margin-left: 125px;
+          }
+     }
+
+     // Home 4 Scss
+
+     &-4 {
+          &-area {
+               padding: 0 0 140px;
+               @media #{$md,$xs} {
+                    padding: 0 0 60px;
+               }
+          }
+          &-content {
+               padding-left: 0;
+               padding-right: 0;
+          }
+          &-paragraph {
+               display: flex;
+               align-items: center;
+               margin-bottom: 0;
+               gap: 10px;
+               @media #{$xs} {
+                    width: 100%;
+                    display: block;
+               }
+
+          }
+          &-title {
+               font-size: 30px;
+               margin-bottom: 0;
+               @media #{$xs} {
+                    font-size: 24px;
+               }
+          }
+          &-action {
+               & h6 {
+                    font-family: var(--wt-ff-p);
+                    font-weight: 400;
+                    color: var(--wt-theme-primary-4);
+               }
+          }
+     }
+
+
+     // Portfolio Inner Page List Scss
+
+     &-list {
+          &-wrap {
+               max-width: 320px;
+               width: 100%;
+               @media #{$md,$xs} {
+                    max-width: 450px;
+                    margin-bottom: 30px;
+               }
+               &.two {
+                    margin-left: auto;
+                    @media #{$md,$xs} {
+                         margin-left: 0;
+                    }
+               }
+               &.four {
+                    margin-left: auto;
+                    @media #{$md,$xs} {
+                         margin-left: 0;
+                    }
+               }
+               &.six {
+                    margin-left: auto;
+                    @media #{$md,$xs} {
+                         margin-left: 0;
+                         margin-bottom: 40px;
+                    }
+               }
+          }
+          &-item {
+               margin-bottom: 70px;
+          }
+          &-thumb {
+               &  img {
+                    @media #{$xxl,$xl,$lg,$md,$xs} {
+                         width: 100%;
+                    }
+               }
+          }
+          &-content-top {
+               margin-bottom: 120px;
+               @media #{$xxl,$xl} {
+                    margin-bottom: 60px;
+               }
+               @media #{$lg} {
+                    margin-bottom: 50px;
+               }
+               @media #{$md,$xs} {
+                    margin-bottom: 40px;
+               }
+          }
+          &-subtitle {
+               margin-bottom: 12px;
+               display: inline-block;
+          }
+          &-title {
+               font-size: 44px;
+               @media #{$lg} {
+                    font-size: 28px;
+               }
+               & a {
+                    background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+                    background-position: 0 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0 1px;
+                    transition: all 0.3s, background-size 0.8s;
+               }
+               &:hover {
+                    & a {
+                         background-size: 100% 1px;
+                    }
+               }
+          }
+          &-paragraph {
+               font-size: 18px;
+               margin-bottom: 41px;
+          }
+          &-button {
+               & .wt-btn-circle {
+                    width: 65px;
+                    height: 65px;
+                    & .wt-btn-circle-icon {
+                         font-size: 16px;
+                    }
+                    & .wt-btn-circle-dot {
+                         background-color: var(--wt-theme-primary-4);
+                    }
+               }
+          }
+
+     }
+
+}
+

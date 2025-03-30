@@ -1,0 +1,91 @@
+@use '../utils'as *;
+
+
+/*----------------------------------------*/
+/*  2.11 Hover Animation
+/*----------------------------------------*/
+
+
+.wt-hover {
+    &__reveal-item {
+        position: relative;
+        &:hover {
+            & .wt-hover {
+                &__reveal-bg {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__reveal-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 405px;
+        height: 270px;
+        opacity: 0;
+        margin: -150px 0 0 -150px;
+        overflow: hidden;
+        pointer-events: none;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        z-index: 5;
+        @media #{$xs} {
+            width: 285px;
+            height: 200px;
+        }
+    }
+    &__widget {
+        position: relative;
+        z-index: 5;
+        & .active-bg {
+            position: absolute;
+            width: 1300px;
+            height: 165px !important;
+            bottom: 0;
+            right: 0;
+            mask-image: url(../img/project/project-shape.svg);
+            background: var(--wt-theme-primary);
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            backdrop-filter: blur(80px);
+            z-index: -1;
+            transition: all 0.5s ease;
+            @media #{$xl} {
+                width: 1170px;
+                height: 145px !important;
+            }
+            @media #{$lg} {
+                width: 975px;
+                height: 121px !important;
+            }
+            @media #{$xs} {
+                width: 1380px;
+                height: 172px !important;
+            }
+            @media #{$sm} {
+                width: 888px;
+                height: 111px !important;
+            }
+        }
+    }
+    &__btn {
+        font-weight: 700;
+        font-size: 16px;
+        width: 213px;
+        height: 213px;
+        line-height: 178px;
+        text-align: center;
+        border-radius: 100%;
+        display: inline-block;
+        backdrop-filter: blur(80px);
+        color: var(--wt-common-white);
+        border: 1px solid var(--wt-common-white);
+        &-wrap {
+            display: inline-block;
+        }
+    }
+}

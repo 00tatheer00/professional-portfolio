@@ -1,0 +1,129 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.17 Section Title
+/*----------------------------------------*/
+
+.wt-section {
+     &-title {
+          font-weight: var(--wt-fw-bold);
+          font-size: 120px;
+          line-height: .92;
+          letter-spacing: -0.03em;
+          margin-bottom: 50px;
+          @media #{$xl} {
+               font-size: 118px;
+          }
+          @media #{$md} {
+               font-size: 90px;
+          }
+          @media #{$xs} {
+               font-size: 49px;
+          }
+          @media #{$sm} {
+               font-size: 70px;
+          }
+          & br {
+               @media #{$md,$xs} {
+                    display: none;
+               }
+          }
+     }
+     &-descr {
+          max-width: 300px;
+          width: 100%;
+          margin-left: 222px;
+          @media #{$xs} {
+               margin-left: 0;
+          }
+     }
+     &-paragraph {
+          font-weight: var(--wt-fw-regular);
+          font-size: 18px;
+     }
+
+     // Home 2 Scss
+
+     &-2 {
+          &-descr {
+               max-width: 308px;
+          }
+     }
+
+     // Home 3 Scss
+
+     &-3 {
+          &-title {
+               font-size: 85px;
+               line-height: 1.00;
+               @media #{$xl} {
+                    font-size: 75px;
+               }
+               @media #{$lg} {
+                    font-size: 70px;
+               }
+               @media #{$md} {
+                    font-size: 65px;
+               }
+               @media #{$xs} {
+                    font-size: 54px;
+               }
+               @media #{$sm} {
+                    font-size: 75px;
+               }
+          }
+          &-paragraph {
+               max-width: 265px;
+               width: 100%;
+               font-size: 16px;
+          }
+     }
+
+     // Home 4 Scss
+
+     &-4 {
+          &-title {
+               font-size: 85px;
+               letter-spacing: -0.03em;
+               margin-bottom: 40px;
+               @media #{$lg} {
+                    font-size: 70px;
+               }
+               @media #{$md} {
+                    font-size: 65px;
+               }
+               @media #{$xs} {
+                    font-size: 50px;
+               }
+          }
+          &-descr {
+               max-width: 455px;
+               margin-left: 110px;
+          }
+          &-paragraph {
+               font-size: 18px;
+          }
+     }
+     
+}
+
+
+
+
+
+
+
+
+
+.wt-text-invert > div {
+     background-size: 200% 100%;
+     background-position-x: 100%;
+     color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
+     background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(255, 255, 255, .35) 50%);
+}
+.wt-reveal-line {
+     overflow: hidden;
+     display: block;
+}

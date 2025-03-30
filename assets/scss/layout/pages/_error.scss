@@ -1,0 +1,67 @@
+@use '../../utils'as *;
+
+
+/*----------------------------------------*/
+/*  7.3 Error Css
+/*----------------------------------------*/
+
+
+.wt-error {
+     &-area {
+          @media #{$md,$xs} {
+               padding: 140px 0 40px;
+          }
+     }
+     &-thumb {
+          margin-bottom: 55px;
+          & img {
+               @media #{$lg,$md,$xs} {
+                    width: 100%;
+               }
+          }
+     }
+     &-wrapper {
+          max-width: 725px;
+          margin: auto;
+     }
+     &-title {
+          font-size: 65px;
+          letter-spacing: -0.03em;
+          margin-bottom: 20px;
+          @media #{$xs} {
+               font-size: 32px;
+          }
+          @media #{$sm} {
+               font-size: 49px;
+          }
+     }
+     &-paragraph {
+          margin-bottom: 40px;
+     }
+     &-form {
+          max-width: 466px;
+          width: 100%;
+          margin: auto;
+          & input {
+               width: 100%;
+               height: 66px;
+               color: var(--wt-common-white);
+               border: 1px solid rgba(255, 255, 255, 0.1);
+               &::placeholder {
+                    font-weight: var(--wt-fw-medium);
+                    font-size: 18px;
+                    color: #909090;
+               }
+          }
+          & .form-input {
+               position: relative;
+          }
+          & i {
+               position: absolute;
+               top: 50%;
+               right: 27px;
+               transform: translateY(-50%);
+               font-weight: var(--wt-fw-medium);
+          }
+     }
+}

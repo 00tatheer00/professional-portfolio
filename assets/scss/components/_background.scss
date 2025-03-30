@@ -1,0 +1,69 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Background 
+/*----------------------------------------*/
+
+
+.white-bg {
+	background-color: var(--wt-common-white);
+}
+.black-bg {
+	background-color: var(--wt-common-black);
+}
+.grey-dark-bg {
+	background-color: var(--wt-common-grey-dark);
+}
+
+.primary-bg {
+	background-color: var(--wt-theme-primary);
+}
+.secondary-bg {
+	background-color: var(--wt-theme-secondary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// [data-bg-color = "footer-bg-grey"] {
+// 	background-color: var(--wt-footer-grey-1);
+// }
+
+// [data-bg-color = "footer-bg-white"] {
+// 	background-color : var(--wt-common-white);
+// }

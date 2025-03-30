@@ -1,0 +1,98 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Preloader
+/*----------------------------------------*/
+
+
+.preloader {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	left: 0;
+	top: 0;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	z-index: 999;
+}
+.preloader svg {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 110vh;
+	fill: #111;
+	box-shadow: rgba(0, 0, 0, .5) 0px 8px 24px;
+}
+.preloader.two svg {
+	fill: #1d1d22;
+	box-shadow: rgba(0, 0, 0, .5) 0px 8px 24px;
+}
+
+.preloader .preloader-heading .load-text {
+	font-size: 30px;
+	font-weight: var(--wt-fw-regular);
+	letter-spacing: 15px;
+  font-family: var(--wt-ff-heading);
+	text-transform: uppercase;
+	z-index: 20;
+}
+.load-text span {
+	-webkit-animation: loading 1s infinite alternate;
+	animation: loading 1s infinite alternate;
+}
+
+.load-text span:nth-child(1) {
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+
+.load-text span:nth-child(2) {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+.load-text span:nth-child(3) {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+.load-text span:nth-child(4) {
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+.load-text span:nth-child(5) {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+
+.load-text span:nth-child(6) {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+.load-text span:nth-child(7) {
+	-webkit-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+
+@-webkit-keyframes loading {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes loading {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

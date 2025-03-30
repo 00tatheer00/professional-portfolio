@@ -1,0 +1,95 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.1 Accordion
+/*----------------------------------------*/
+
+.wt-faq {
+    &-accordion-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 3px 0 10px;
+        &:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        &:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+    }
+    &-accordion-title {
+        font-family: var(--wt-ff-heading);
+        font-weight: var(--wt-fw-bold);
+        font-size: 30px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        @media #{$xs} {
+            font-size: 21px;
+        }
+        &.collapsed {
+            &::before {
+                transform: rotate(0);
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "\e09f";
+            font-family: "Font Awesome 6 Pro";
+            right: 0;
+            transform: rotate(90deg);
+            color: var(--wt-common-white);
+            font-size: 18px;
+            font-weight: 400;
+            transition: .6s;
+        }
+        &:not(.collapsed) {
+            color: var(--wt-common-white);
+            background: none;
+        }
+    }
+    &-accordion-descri {
+        padding: 30px 90px 16px 30px;
+        @media #{$xs} {
+            padding: 30px 20px 16px 30px;
+        }
+
+    }
+    &-accordion-paragraph {
+        margin-bottom: 22px;
+    }
+    &-accordion-list {
+        & ul {
+            & li {
+                list-style: none;
+                display: flex;
+                align-items: end;
+                gap: 10px;
+                margin-bottom: 4px;
+                & span {
+                    display: inline-block;
+                    line-height: 1;
+                    font-size: 20px;
+                    & i {
+                        line-height: 1;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    // Faq Inner Page
+
+    &-page {
+        &-area {
+            & .wt-faq-accordion-descri {
+                padding-right: 0 !important;
+            }
+            & .wt-faq-accordion {
+                padding-bottom: 130px;
+            }
+
+        }
+    }
+
+}
+
+

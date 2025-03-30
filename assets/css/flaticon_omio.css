@@ -1,0 +1,65 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon_omio";
+    src: url("../fonts/flaticon_omio.woff2") format("woff2"),
+url("../fonts/flaticon_omio.woff") format("woff"),
+url("../fonts/flaticon_omio.eot") format("embedded-opentype"),
+url("../fonts/flaticon_omio.ttf") format("truetype"),
+url("../fonts/flaticon_omio.svg") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_omio !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-check-mark:before {
+    content: "\f101";
+}
+.flaticon-idea:before {
+    content: "\f102";
+}
+.flaticon-vector:before {
+    content: "\f103";
+}
+.flaticon-web-designing:before {
+    content: "\f104";
+}
+.flaticon-editor:before {
+    content: "\f105";
+}
+.flaticon-asterisk:before {
+    content: "\f106";
+}
+.flaticon-email-marketing:before {
+    content: "\f107";
+}
+.flaticon-sustainability:before {
+    content: "\f108";
+}
+.flaticon-double-quotes:before {
+    content: "\f109";
+}
+.flaticon-add:before {
+    content: "\f10a";
+}
+.flaticon-ads:before {
+    content: "\f10b";
+}
+

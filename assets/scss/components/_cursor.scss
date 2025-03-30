@@ -1,0 +1,156 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.9 cursor
+/*----------------------------------------*/
+
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition: 0.15s;
+    border: 1px solid var(--wt-common-white);
+}
+.grow,
+.grow-small {
+    transform: scale(2);
+    background: var(--wt-common-white);
+    mix-blend-mode: difference;
+    border: none;
+    transition: .5s;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+body.wt-magic-cursor #magic-cursor {
+	display: block;
+ }
+ #magic-cursor {
+	 position: absolute;
+	 display: none;
+	 width: 10px;
+	 height: 10px;
+	 pointer-events: none;
+	 z-index: 99999;
+	 opacity: 0;
+ }
+ 
+ #ball {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	pointer-events: none;
+	background-color: var(--wt-common-white) !important;
+	border-radius: 50%;
+	justify-content: center;
+	mix-blend-mode: difference;
+	color: transparent;
+ }
+ 
+ 
+ /* Ball view 
+ ============= */
+ #ball .ball-view {
+	 position: absolute;
+	 opacity: 0;
+	 visibility: hidden;
+	 padding: 0 5px;
+	 line-height: 1.1;
+	 text-align: center;
+	 transform: scale(0);
+	 font-family: var(--wt-ff-common);
+	 font-weight: var(--wt-fw-regular);
+	 font-size: var(--wt-fz-p);
+	 text-transform: capitalize;
+	 color: var(--wt-common-black);
+ }
+ 
+ /* Ball drag 
+ ============= */
+ #ball .ball-drag {
+	 position: absolute;
+	 display: block;
+	 width: 100%;
+	 padding: 0 5px;
+	 font-size: 15px;
+	 font-weight: var(--wt-fw-sbold);
+	 color: #000;
+	 line-height: 1.2;
+	 text-align: center;
+	 transition: all 0.3s;
+ }
+ #ball .ball-drag::before,
+ #ball .ball-drag::after {
+	 position: absolute;
+	 top: 50%;
+	 margin-top: -5px;
+	 font-size: 19px;
+	 color: var(--wt-common-white);
+	 height: 10px;
+	 line-height: 10px;
+	 font-family: "Font Awesome 6 Pro";
+	 font-weight: var(--wt-fw-black);
+	 display: inline-block;
+	 font-style: normal;
+	 font-variant: normal;
+	 text-rendering: auto;
+	 -webkit-font-smoothing: antialiased;
+ }
+ 
+ #ball .ball-drag::before {
+	 content: "\f104"; /* Font Awesome */
+	 left: 0;
+	 transform: translate3d(-30px, 0, 0);
+	 transition: all 0.25s;
+ }
+ #ball .ball-drag::after {
+	 content: "\f105"; /* Font Awesome */
+	 right: 0;
+	 transform: translate3d(30px, 0, 0);
+	 transition: all 0.25s;
+ }
+ #ball.with-blur {
+	 -webkit-backdrop-filter: blur(5px);
+	 backdrop-filter: blur(5px);
+	 -webkit-transform: translate3d(0, 0, 0);
+	 transform: translate3d(0, 0, 0);		
+ }
+ 
+ 
+ /* Ball close 
+ ============== */
+ #ball.ball-close-enabled {
+	 opacity: 1 !important;
+ }
+ #ball .ball-close {
+	 position: absolute;
+	 padding: 0 5px;
+	 font-size: 14px;
+	 font-weight: var(--wt-fw-sbold);
+	 color: #000;
+	 line-height: 1;
+	 text-align: center;
+ }
+ 
+ .wt-magnetic-wrap {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+ }
+ 

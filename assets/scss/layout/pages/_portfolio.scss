@@ -1,0 +1,339 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*   7.8 Portfolio Css
+/*----------------------------------------*/
+
+.wt-portfolio {
+
+     // Home 3 Scss
+
+     &-3 {
+          &-area {
+               padding: 0 0 60px;
+               @media #{$md,$sm,$xs} {
+                    padding: 0 0 0;
+               }
+               & .wt-section-wrapper {
+                    @media #{$md,$sm,$xs} {
+                         margin-bottom: 0;
+                    }
+               }
+               & .wt-section-title {
+                    @media #{$md,$sm,$xs} {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          &-paragraph {
+               & p {
+                    font-size: 18px;
+               }
+          }
+          &-filter {
+               @media #{$xs} {
+                    display: flex;
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+               }
+               & button {
+                    color: var(--wt-text-2);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 20px;
+                    padding: 0px 18px 4px;
+                    margin-right: 15px;
+                    display: inline-block;
+                    @media #{$sm} {
+                         padding: 0px 12px 4px;
+                    }
+                    &:hover {
+                         background: var(--wt-theme-primary-3);
+                         border-color: var(--wt-theme-primary-3);
+                         color: var(--wt-common-black);
+                    }
+                    &.active {
+                         background: var(--wt-theme-primary-3);
+                         border-color: var(--wt-theme-primary-3);
+                         color: var(--wt-common-black);
+                    }
+                    &:last-child {
+                         margin-right: 0;
+                    }
+               }
+          }
+          &-wrapper {
+               margin-bottom: 65px;
+          }
+          &-thumb {
+               margin-bottom: 22px;
+               & img {
+                    width: 100%;
+               }
+          }
+          &-top-paragraph {
+               max-width: 410px;
+               margin-left: auto;
+               @media #{$md,$xs} {
+                    margin-left: 0;
+                    margin-bottom: 40px;
+               }
+               & p {
+                    font-size: 18px;
+               }
+          }
+          &-paragraph {
+               &.mt-40 {
+                    @media #{$md,$sm,$xs} {
+                         margin-bottom: 40px;
+                    }
+               }
+          }
+          &-paragraph {
+               color: var(--wt-text-2);
+               margin-bottom: 6px;
+               @media #{$md} {
+                    margin-top: 0;
+               }
+          }
+          &-title {
+               font-size: 30px;
+               & a {
+                    background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+                    background-position: 0 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0 1px;
+                    transition: all 0.3s, background-size 0.8s;
+               }
+               &:hover {
+                    & a {
+                         background-size: 100% 1px;
+                         
+                    }
+               }
+          }
+
+     }
+
+     // Home 4 Scss
+
+     &-4 {
+          &-area {
+               padding: 0 0 120px;
+               margin: 0 45px 0;
+               @media #{$x4l,$x3l,$xxl,$xxl,$lg,$md,$xs} {
+                    margin: 0;
+               }
+               @media #{$lg} {
+                    padding: 0 0 180px;
+               }
+               @media #{$md,$xs} {
+                    padding: 0 0 30px;
+               }
+               & .wt-section-4-wrapper {
+                    @media #{$md,$xs} {
+                         margin-bottom: 20px;
+                    }
+               }
+               & .wt-section-4-title {
+                    @media #{$md,$xs} {
+                         margin-bottom: 0px;
+                    }
+               }
+               & .wt-portfolio-4-top-descri {
+                    @media #{$md,$xs} {
+                         margin-bottom: 40px;
+                    }
+               }
+          }
+          &-top-paragraph {
+               font-size: 18px;
+               max-width: 360px;
+               width: 100%;
+               margin-left: auto;
+               @media #{$md,$xs} {
+                    margin-left: 0;
+                    max-width: 400px;
+                
+               }
+          }
+          &-wrapper {
+              &:hover {
+               & .wt-portfolio-4-box {
+                     opacity: 1;
+                     visibility: visible;
+                     transform: translateY(0);
+                 }
+              }
+          }
+          &-thumb {
+               margin-bottom: 30px;
+               position: relative;
+               z-index: 2;
+          }
+          &-box {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               opacity: 0;
+               visibility: hidden;
+               transform: translateY(-100px);
+               transition: 0.6s ease-in-out;
+               position: relative;
+               z-index: 1;
+          }
+          &-icon {
+               & a {
+                    width: 60px;
+                    height: 60px;
+                    line-height: 1;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--wt-theme-primary-4);
+                    color: var(--wt-common-black);
+                    border-radius: 50%;
+                    margin-bottom: 25px;
+                    font-size: 20px;
+                    @media #{$md,$xs} {
+                         width: 40px;
+                         height: 40px;
+                         font-size: 16px;
+                    }
+                    & i {
+                         display: inline-flex;
+                         line-height: 1;
+                         transition: all 0.3s ease-in-out 0s;
+                    }
+                    &:hover {
+                         background: var(--wt-common-white);
+                         color: var(--wt-common-black);
+                    }
+               }
+          }
+          &-title {
+               color: var(--wt-common-white);
+               margin-bottom: 0;
+               font-size: 30px;
+               background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+               background-position: 0 100%;
+               background-repeat: no-repeat;
+               background-size: 0 1px;
+               transition: all 0.3s, background-size 0.8s;
+               display: inline-block;
+               @media #{$md,$xs} {
+                    font-size: 20px;
+               }
+               &:hover {
+                   background-size: 100% 1px;
+               }
+          }
+          &-paragraph {
+               margin-bottom: 0;
+               @media #{$lg,$md,$xs} {
+                    font-size: 14px;
+               }
+          }
+     }
+
+     // Portfolio Single Page Scss
+
+     &-single {
+          // details Scss
+
+          &-details {
+               border-top: 1px solid rgba(255, 255, 255, 0.1);
+               padding-top: 60px;
+               & ul {
+                    display: flex;
+                    justify-content: space-between;
+                    list-style: none;
+                    flex-wrap: wrap;
+                    row-gap: 30px;
+                    & li {
+                         font-family: var(--wt-ff-heading);
+                         font-weight: var(--wt-fw-bold);
+                         font-size: 30px;
+                         letter-spacing: -0.02em;
+                         text-transform: uppercase;
+                         color: var(--wt-common-white);
+                         @media #{$md} {
+                              font-size: 26px;
+                         }
+                         @media #{$xs} {
+                              font-size: 26px;
+                         }
+                         @media #{$sm} {
+                              font-size: 30px;
+                         }
+                         & span {
+                              font-size: 18px;
+                              font-family: var(--wt-ff-body);
+                              font-weight: var(--wt-fw-regular);
+                              display: block;
+                              text-transform: capitalize;
+                              margin-bottom: 10px;
+                         }
+                    }
+               }
+          }
+          &-area {
+               @media #{$xs} {
+                    padding-bottom: 20px;
+               }
+          }
+          &-top-thumb {
+               @media #{$md,$xs} {
+                    margin-bottom: 30px;
+               }
+          }
+          &-title {
+               font-size: 44px;
+          }
+          &-paragraph {
+               font-size: 18px;
+               line-height: 167%;
+          }
+          &-paragraph {
+               font-size: 18px;
+               line-height: 167%;
+               margin-bottom: 31px;
+          }
+          &-nav {
+               border-top: 1px solid rgba(255, 255, 255, 0.1);
+               padding-top: 130px;
+          }
+     }
+
+     // gellary
+
+     &-gellary {
+          &-area {
+               @media #{$md,$xs} {
+                    padding: 120px 0 40px;
+               }
+               & .row.mb-30 {
+                    @media #{$xs} {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+     }
+
+     // list
+
+     &-list {
+          &-area {
+               @media #{$md,$xs} {
+                    padding: 120px 0 40px;
+               }  
+          }
+          &-row {
+               margin-bottom: 70px;
+               @media #{$xl} {
+                    margin-bottom: 0;
+               }  
+          }
+     }
+
+}

@@ -1,0 +1,13 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4 Header Style 4
+/*----------------------------------------*/
+
+.wt-header {
+     &-4 {
+          &-area {
+               background: var(--wt-common-black-secondary);
+          }
+     }
+}

@@ -1,0 +1,43 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'typography' as *;
+
+:root {
+    /**
+    @color declaration
+    */
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --wt-#{$color}-#{$shade}: #{$value};
+        }
+    }
+
+    /**
+    @Font-Size Declaration
+    */
+	@each $fs, $shades in $font-size {
+		@each $shade, $value in $shades {
+			--wt-#{$fs}-#{$shade}: #{$value};
+		}
+	}
+
+    /**
+    @font wight declaration
+    */
+    @each $fw, $shades in $font-scale {
+		@each $shade, $value in $shades {
+			--wt-#{$fw}-#{$shade}: #{$value};
+		}
+	}
+
+
+    /**
+    @font family declaration
+    */
+    @each $ff, $shades in $font-family {
+        @each $shade, $value in $shades {
+            --wt-#{$ff}-#{$shade}: #{$value};
+        }
+    }
+
+}

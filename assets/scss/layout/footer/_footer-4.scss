@@ -1,0 +1,54 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*   6.4 Footer Style 4 
+/*----------------------------------------*/
+
+
+
+.wt-footer {
+     &-4 {
+          &-top {
+               border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+               padding-bottom: 100px;
+               @media #{$md,$xs} {
+                    padding-bottom: 35px;
+               }
+          }
+          &-center {
+               padding: 120px 0 120px;
+               @media #{$md,$xs} {
+                    padding: 60px 0 60px;
+               }
+          }
+          &-widget-mail {
+               & h6 {
+                    font-size: 16px;
+                    font-weight: var(--wt-fw-sbold);
+                    margin-bottom: 22px;
+               }
+               & a {
+                    font-size: 30px;
+                    color: var(--wt-common-white);
+                    font-family: var(--wt-ff-heading);
+               }
+          }
+          &-right-social {
+               @media #{$lg} {
+                    margin-left: 30px;
+               }
+          }
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+

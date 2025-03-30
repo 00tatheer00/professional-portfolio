@@ -1,0 +1,29 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*   6.3 Footer Style 3
+/*----------------------------------------*/
+
+.wt-footer {
+     &-3 {
+          &-area {
+               &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1000px;
+                    height: 528px;
+                    left: 0;
+                    bottom: -10%;
+                    mask-image: url(../img/service/service-2-bg-shape.svg);
+                    background: var(--wt-theme-primary);
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                    mask-size: contain;
+                    backdrop-filter: blur(300px);
+                    z-index: -1;
+                    display: none;
+               }
+          }
+     }
+}
+

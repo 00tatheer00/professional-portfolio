@@ -1,0 +1,120 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.6 Buttons
+/*----------------------------------------*/
+
+
+.wt-header {
+     &-btn {
+          color: var(--wt-common-white);
+          text-transform: uppercase;
+          font-weight: var(--wt-fw-sbold);
+          display: inline-flex;
+          gap: 12px;
+          align-items: center;
+          background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+          background-position: 0 100%;
+          background-repeat: no-repeat;
+          background-size: 0 1px;
+          transition: all 0.3s, background-size 0.8s;
+          &:hover {
+              background-size: 100% 1px;
+          }
+     }
+}
+
+
+
+.wt-btn {
+     &-circle{
+          width: 100px;
+          height: 100px;
+          line-height: 1;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--wt-common-white);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+          & .wt-btn-circle-icon {
+               font-size: 20px;
+               transition: .4s;
+          }
+          & .wt-hover-btn-wrapper {
+               display: inline-block;
+          }
+          & .wt-btn-circle-dot{
+              position: absolute;
+              left: 42px;
+              bottom: -15px;
+              width: 20px;
+              height: 20px;
+              transition: all .6s;
+              border-radius: 50%;
+              background-color: var(--wt-common-white);
+              transform: translate(-50%, -50%);
+              z-index: -1;
+          }
+          &:hover{
+               border: 1px solid transparent;
+               & .wt-btn-circle-dot{
+                    width: 420px;
+                    height: 420px;
+               }
+               & span{
+                    color: var(--wt-common-black);
+               }
+          }
+      }
+}
+
+.wt-cercal-sm {
+     &-button {
+          & a {
+               width: 65px;
+               height: 65px;
+               line-height: 1;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               color: var(--wt-common-black);
+               border-radius: 50%;
+               border: 1px solid rgba(20, 20, 20, 0.8);
+          }
+     }
+}
+
+
+
+.icon_box {
+	position: relative;
+	display: inline-flex;
+	overflow: hidden;
+	rotate: -45deg;
+	.icon_first,
+	.icon_second {
+	    color: var(--wt-common-white);
+	    font-size: 16px;
+	    transition: all 0.3s ease-in-out 0s;
+	    line-height: 1;
+	}
+	.icon_second {
+	    position: absolute;
+	    transform: translateX(-150%);
+	}
+   }
+
+   
+   .icon_main {
+	&:hover{
+	  .icon_box .icon_first {
+	    transform: translateX(150%);
+	  }
+	  .icon_box .icon_second {
+	    transform: translateX(0%);
+	  }
+	}
+   }

@@ -1,0 +1,129 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.3 Recent Post Css
+/*----------------------------------------*/
+
+
+  // Recent post
+  .widget-news {
+     & li {
+       display: flex;
+       align-items: center;
+       gap: 30px;
+       &:not(:last-child) {
+         margin-bottom: 20px;
+       }
+       & .image {
+           max-width: 100px;
+           width: 100%;
+           height: 100px;
+           & img {
+             width: 100%;
+             height: 100%;
+           }
+       }
+       & .content {
+         & h6 {
+           font-weight: var(--wt-fw-sbold);
+           font-size: 20px;
+           line-height: 1.5;
+           margin-bottom: 8px;
+           @media #{$xl,$lg} {
+             font-size: 16px;
+            }
+           & a {
+             background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+             background-position: 0 100%;
+             background-repeat: no-repeat;
+             background-size: 0 1px;
+             transition: all 0.3s, background-size 0.8s;
+           }
+           &:hover {
+             & a {
+               background-size: 100% 1px;
+             }
+           }
+         }
+         & .date {
+             display: block;
+             margin-top: -3px;
+             margin-bottom: 5px;
+             @media #{$xl} {
+              font-size: 14px;
+             }
+             & i {
+               margin-right: 5px;
+             }
+         }
+   
+       }
+     }
+   }
+
+
+
+// tag
+.tag-clouds {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     flex-wrap: wrap;
+     row-gap: 10px;
+
+     & a {
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         border-radius: 20px;
+         padding: 3px 18px;
+         display: inline-block;
+ 
+         &:hover {
+             background: var(--wt-theme-primary-4);
+             color: var(--wt-common-black);
+         }
+     }
+ }
+
+
+ /* Tag Cloud */
+.tag-share {
+     flex-wrap: wrap;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     & .item {
+         display: flex;
+         align-items: center;
+         margin-bottom: 15px;
+ 
+         & h6 {
+             margin-right: 15px;
+             margin-bottom: 0;
+             font-weight: var(--wt-fw-sbold);
+             font-size: 20px;
+         }
+     }
+     & .social {
+         & a {
+             font-size: 12px;
+             margin-right: 6px;
+             transition: all 0.3s 0s ease-out;
+             color: var(--wt-common-white);
+             width: 35px;
+             height: 35px;
+             line-height: 1;
+             border-radius: 25px;
+             border: 1px solid rgba(255, 255, 255, 0.1);
+             display: inline-flex;
+             justify-content: center;
+             align-items: center;
+ 
+             &:hover {
+                 background: var(--wt-theme-primary);
+                 color: var(--wt-common-white);
+                 border: 1px solid var(--wt-theme-primary);
+             }
+         }
+     }
+ }

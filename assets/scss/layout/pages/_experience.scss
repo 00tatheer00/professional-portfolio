@@ -1,0 +1,101 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  7.4 Experience Css 
+/*----------------------------------------*/
+
+.wt-experience {
+     &-3 {
+          &-area {
+               padding: 0 0 110px;
+               @media #{$md,$sm,$xs} {
+                    padding: 0 0 50px;
+               }
+               & .wt-section-3-paragraph {
+                    max-width: 400px;
+               }
+          }
+          &-left {
+               @media #{$lg,$md} {
+                    position: relative;
+                    z-index: 1;
+               }
+          }
+          &-tab-button {
+               @media #{$lg} {
+                    position: absolute;
+                    top: 20px;
+                    right: 0;
+               }
+               @media #{$md} {
+                    position: absolute;
+                    top: 18px;
+                    right: -15px;
+               }
+          }
+          &-nav-tabs {
+               border-bottom: none;
+               --bs-nav-tabs-border-radius: 0;
+               flex-direction: column;
+               row-gap: 10px;
+               @media #{$xs} {
+                    display: flex;
+                    flex-direction: inherit;
+                    gap: 7px;
+                    margin-bottom: 40px;
+                    --bs-nav-link-padding-x: 13px;
+               }
+          }
+          &-nav-link {
+               border: 1px solid var(--wt-common-white) !important;
+               color: var(--wt-common-white);
+               &:hover {
+                    color: var(--wt-common-white);
+               }
+               &.active {
+                    background: var(--wt-theme-primary-3) !important;
+                    border-color: var(--wt-theme-primary-3) !important;
+               }
+          }
+          &-wrapper {
+               margin-left: 110px;
+               @media #{$lg,$md,$xs} {
+                    margin-left: 0;
+               }
+          }
+          &-item {
+               background: rgba(255, 255, 255, 0.03);
+               padding: 32px 50px;
+               border: 1px solid rgba(255, 255, 255, 0.1);
+               margin-bottom: 10px;
+               @media #{$xs} {
+                    padding: 32px 20px;
+               }
+          }
+          &-top-content {
+               display: flex;
+               justify-content: space-between;
+               margin-bottom: 22px;
+          }
+          &-top-left {
+               & p {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 3px;
+               }
+          }
+          &-top-right {
+               & span {
+                    text-transform: uppercase;
+                    color: var(--wt-theme-primary-3);
+               }
+          }
+          &-bottom-paragraph {
+               &:last-child {
+                    margin-bottom: 0;
+               }
+          }
+     }
+}

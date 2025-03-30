@@ -1,0 +1,148 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  2.2 Animations
+/*----------------------------------------*/
+
+
+@keyframes bounce-thum-1 {
+	0% {
+	    transform: translateX(0);
+	}
+	50% {
+	    transform: translateX(50px);
+	}
+	100% {
+	    transform: translateX(0);
+	}
+ }
+ @keyframes bounce-thum-2 {
+	 0% {
+	   transform: rotate(5deg);
+	 }
+	 100% {
+	   transform: rotate(-5deg);
+	 }
+   }
+ 
+ 
+ @keyframes zoom-in-zoom-out {
+	0% {
+	  transform: scale(0.3, 0.3);
+	}
+	50% {
+	  transform: scale(1, 1);
+	}
+	100% {
+	  transform: scale(0.3, 0.3);
+	}
+   }
+   @keyframes rotate-thum {
+	0% {
+	    transform: rotate(0);
+	}
+	50% {
+	    transform: rotate(160deg);
+	}
+	100% {
+	    transform: rotate(0);
+	}
+ }
+ @keyframes moving {
+	0% {
+   
+	  transform: translatey(0px);
+	}
+	20%{
+	    transform: translateX(-40px);
+	}
+	50% {
+	  transform: translatey(-40px);
+	}
+   
+	100% {
+	  transform: translatey(0px);
+	}
+   }
+ @keyframes bounce-thum-3 {
+	 0% {
+	-webkit-transform: translateY(-30px);
+	-moz-transform: translateY(-30px);
+	-ms-transform: translateY(-30px);
+	-o-transform: translateY(-30px);
+	transform: translateY(-30px);
+   }
+   100% {
+	-webkit-transform: translateY(20px);
+	-moz-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	-o-transform: translateY(20px);
+	transform: translateY(20px);
+   }
+ }
+ @keyframes rotate-infinte {
+	 0%{
+		 transform:rotate(0deg);
+		 filter:hue-rotate(0);
+	 }
+	 100%{
+		 transform:rotate(360deg);
+		 filter:hue-rotate(360deg);
+	 }
+ }
+ @keyframes bicycle {
+	 from { transform: translateX(-640px);}
+	 to { transform: translatex(1380px);}
+ }
+ @keyframes micro {
+	 from { transform: translateX(620px);}
+	 to { transform: translateX(-1500px);}
+ }
+ 
+ 
+ @-moz-keyframes fadeInDown {
+	 0% {
+	  margin-top:-150px
+	 }
+	 100% {
+	  margin-top:0
+	 }
+    }
+    @-ms-keyframes fadeInDown {
+	 0% {
+	  margin-top:-150px
+	 }
+	 100% {
+	  margin-top:0
+	 }
+    }
+    @-webkit-keyframes fadeInDown {
+	 0% {
+	  margin-top:-150px
+	 }
+	 100% {
+	  margin-top:0
+	 }
+    }
+    @keyframes fadeInDown {
+	 0% {
+	  margin-top:-150px
+	 }
+	 100% {
+	  margin-top:0
+	 }
+    }
+ 
+ 
+    @include keyframes(tfLeftToRight){
+	 49% {
+		 transform: translateX(30%);
+	 }
+	 50% {
+		 opacity: 0;
+		 transform: translateX(-30%);
+	 }
+	 100% {
+		 opacity: 1;
+	 }
+ }
+ 

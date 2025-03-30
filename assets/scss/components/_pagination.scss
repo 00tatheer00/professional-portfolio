@@ -1,0 +1,38 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  2.14 Pagination
+/*----------------------------------------*/
+
+.#{$theme-prifix}-pagination{
+	& ul{
+		@include flexbox();
+		
+		& li{
+			display: inline-block;
+			&:not(:last-child){
+				margin-right: 6px;
+			}
+			& a,
+			& span{
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				line-height: 38px;
+				text-align: center;
+				font-size: var(--wt-fz-p);
+				              font-weight: var(--wt-fw-medium);
+				color: var(--wt-text-body);
+				&:hover,
+				&.current{
+					background: var(--wt-theme-primary);
+					border-color: var(--wt-theme-primary);
+					color: var(--wt-common-white);
+				}
+
+				& svg{
+					@extend %svg-2;
+				}
+			}
+		}
+	}
+}

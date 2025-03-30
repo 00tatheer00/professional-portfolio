@@ -1,0 +1,69 @@
+@use '../../utils' as *;
+
+
+
+/*----------------------------------------*/
+/*  7.7 Marquee Css 
+/*----------------------------------------*/
+
+
+
+.wt-maquee {
+     &-3 {
+          &-area {
+               background: var(--wt-theme-primary-3);
+               padding: 16px 0;
+               rotate: -3deg;
+          }
+          &-transition {
+               transition-timing-function: linear;
+          }
+          &-item {
+               display: flex;
+               white-space: nowrap;
+          }
+          &-box {
+               display: flex;
+               align-items: center;
+               gap: 20px;
+               width: auto;
+          }
+          &-icon {
+               & span {
+                    animation: rotate-infinte 6s infinite linear;
+                    display: inline-block;
+                    color: var(--wt-common-black);
+                    font-size: 30px;
+                    & i {
+                         display: inline-block;
+                         line-height: 1;
+                    }
+               }
+          }
+          &-title {
+               color: var(--wt-common-black);
+               margin-bottom: 0;
+               font-weight: var(--wt-fw-sbold);
+               font-size: 44px;
+               @media #{$md} {
+                    font-size: 30px;
+               }
+               @media #{$xs} {
+                    font-size: 20px;
+               }
+          }
+
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* !END: Theme Maquee CSS */

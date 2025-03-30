@@ -1,0 +1,227 @@
+@use '../../utils'as *;
+
+
+/*----------------------------------------*/
+/*   7.9 Pricing Css 
+/*----------------------------------------*/
+
+
+.wt-pricing {
+
+     // Home 2 Scss
+
+     &-2 {
+          &-area {
+               padding: 130px 0 110px;
+               @media #{$md,$xs} {
+                    padding: 70px 0 50px;
+               }
+               & .wt-section-wrapper {
+                    @media #{$xs} {
+                         margin-bottom: 0;
+                    }
+               }
+               & .wt-section-2-descr {
+                    max-width: 310px;
+               }
+               & .wt-skill-2-thumb {
+                    @media #{$xs} {
+                         margin-bottom: 0;
+                         margin-top: 20px;
+                    }
+               }
+          }
+          &-wrapper {
+               background: #91D983;
+               padding: 50px 52px 50px;
+               margin-bottom: 30px;
+               @media #{$xl} {
+                    padding: 50px 20px 50px 30px;
+               }
+               @media #{$xs} {
+                    padding: 50px 18px 50px 30px;
+               }
+               &.two {
+                    background: #D9CF83;
+               }
+               &.three {
+                    background: #F2879E;
+               }
+          }
+          &-subtitle {
+               font-family: var(--wt-ff-body);
+               font-weight: var(--wt-fw-bold);
+               text-transform: uppercase;
+               color: var(--wt-common-black);
+               margin-bottom: 0;
+          }
+          &-title {
+               font-weight: var(--wt-fw-sbold);
+               font-size: 60px;
+               letter-spacing: -0.03em;
+               color: var(--wt-common-black);
+               margin-bottom: 18px;
+          }
+          &-paragraph {
+               font-weight: var(--wt-fw-medium);
+               font-size: 18px;
+               color: var(--wt-common-black);
+               margin-bottom: 40px;
+          }
+          &-thumb {
+               margin-left: 125px;
+               @media #{$xxl} {
+                    margin-left: 50px;
+               }
+               @media #{$xl} {
+                    margin-left: 0;
+               }
+               @media #{$lg} {
+                    margin-left: -80px;
+               }
+               @media #{$xs} {
+                    margin-left: 0;
+               }
+
+          }
+          &-list {
+               margin-bottom: 46px;
+               & ul {
+                    & li {
+                         color: var(--wt-common-black);
+                         list-style: none;
+                         display: flex;
+                         align-items: end;
+                         gap: 10px;
+                         font-weight: var(--wt-fw-sbold);
+                         font-size: 18px;
+                         margin-bottom: 12px;
+                         & span {
+                              display: inline-block;
+                              line-height: 1;
+                              font-size: 20px;
+                              & i {
+                                  line-height: 1;
+                                  display: inline-block;
+                              }
+                         }
+                    }
+               }
+          }
+          &-button {
+               & a {
+                    &:hover {
+                         background: var(--wt-common-black);
+                         & i {
+                              color: var(--wt-common-white);
+                         }
+                    }
+
+               }
+          }
+     }
+
+     // Home 2 Scss
+
+     &-3 {
+          &-area {
+               padding: 130px 0 130px;
+               @media #{$md,$sm,$xs} {
+                    padding: 65px 0 40px;
+               }
+               & .wt-portfolio-3-paragraph {
+                    max-width: 357px;
+               }
+               & .wt-section-3-wrapper {
+                    @media #{$md,$xs} {
+                         margin-bottom: 0;
+                    }
+               }
+               & .wt-section-title {
+                    @media #{$md,$xs} {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+          &-wrapper {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               padding: 38px 52px 22px;
+               @media #{$lg} {
+                    padding: 38px 20px 22px;
+               }
+               @media #{$md,$sm} {
+                    padding: 38px 60px 22px;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: left;
+                    align-items: stretch;
+                    row-gap: 20px;
+               }
+               @media #{$xs} {
+                    padding: 38px 30px 22px;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: left;
+                    align-items: stretch;
+                    row-gap: 20px;
+               }
+               & .wt-pricing-2-title {
+                    @media #{$lg} {
+                         font-size: 50px;
+                    }
+               }
+               & .wt-pricing-2-list ul li {
+                    @media #{$lg} {
+                         font-size: 16px;
+                    }
+               }
+          }
+          &-top {
+               max-width: 305px;
+               width: 100%;
+               @media #{$xl} {
+                    max-width: 230px;
+               }
+               @media #{$lg} {
+                    max-width: 180px;
+               }
+          }
+          &-list {
+               margin-bottom: 0;
+               & ul {
+                    & li {
+                         float: left;
+                         width: 44%;
+                         @media #{$md,$xs} {
+                              float: inherit;
+                              width: inherit;
+                         }
+                    }
+               }
+          }
+          &-button {
+               & a {
+                    &:hover {
+                         background: var(--wt-common-black);
+                         color: var(--wt-common-white);
+                    }
+               }
+          }
+     }
+
+     // Pricing Inner Page Scss
+
+     &-page {
+          &-area {
+               @media #{$md,$xs} {
+                    padding: 120px 0 20px;
+               }
+               & .wt-section-descr {
+                    max-width: 310px;
+               }
+          }
+     }
+
+}

@@ -1,0 +1,93 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.2 Header Style 2
+/*----------------------------------------*/
+
+.wt-header {
+     &-2 {
+          &-area {
+               background: var(--wt-common-black);
+               padding: 29px 54px;
+               @media #{$md,$xs} {
+                    padding: 29px 0;
+               }
+          }
+          &-wrapper {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               flex-wrap: wrap;
+               row-gap: 10px;
+          }
+          &-left {
+               display: flex;
+               align-items: center;
+               flex-wrap: wrap;
+               row-gap: 10px;
+               max-width: 400px;
+               width: 100%;
+               @media #{$xs} {
+                    justify-content: space-between;
+                    max-width: 100%;
+               }
+          }
+          &-logo {
+               max-width: 250px;
+               width: 100%;
+               @media #{$lg} {
+                    max-width: 200px;
+               }
+               @media #{$md} {
+                    max-width: 300px;
+  
+               }
+          }
+          &-menu {
+               & ul {
+                    & li {
+                         & a {
+                              font-size: 27px;
+                              font-family: var(--wt-ff-heading);
+                              text-transform: uppercase;
+                         }
+                    }
+               }
+          }
+          &-right {
+               display: flex;
+               align-items: center;
+               flex-wrap: wrap;
+               row-gap: 10px;
+               @media #{$xs} {
+                    display: none;
+               }
+          }
+          &-dots {
+               width: 5px;
+               height: 5px;
+               background: var(--wt-common-white);
+               border-radius: 50%;
+               margin: 0 42px 0;
+               @media #{$md,$sm,$xs} {
+                    display: none;
+               }
+          }
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.5 Breadcrumb
+/*----------------------------------------*/
+
+
+
+.wt-breadcrumb {
+     &-area {
+          @media #{$md,$xs} {
+               padding: 120px 0 60px;
+          }
+     }
+    &-wrapper {
+         &.single-service {
+               display: flex;
+               align-items: end;
+               @media #{$lg,$md,$xs} {
+                    flex-wrap: wrap;
+               }
+         }
+    }
+    &-content {
+         max-width: 768px;
+         width: 100%;
+    }
+    &-subtile {
+          font-family: var(--wt-ff-heading);
+          font-weight: var(--wt-fw-sbold);
+          font-size: 20px;
+          text-transform: uppercase;
+     }
+    &-title {
+         font-size: 120px;
+         line-height: .92;
+         letter-spacing: -0.03em;
+         margin-bottom: 50px;
+         @media #{$xl} {
+               font-size: 100px;
+         }
+         @media #{$md} {
+            font-size: 105px;
+         }
+         @media #{$xs} {
+               font-size: 54px;
+         }
+         @media #{$sm} {
+              font-size: 60px;
+         }
+    }
+    &-descri {
+          max-width: 410px;
+          width: 100%;
+          margin-left: 110px;
+          @media #{$xs} {
+               margin-left: 0;
+          }
+     }
+    &-paragraph {
+         font-family: var(--wt-ff-heading);
+         font-weight: var(--wt-fw-medium);
+         font-size: 20px;
+         max-width: 631px;
+         margin-bottom: 50px;
+         @media #{$lg,$md,$xs} {
+             margin-bottom: 0;
+         }
+
+    }
+    &-list {
+         margin-top: 60px;
+         @media #{$xl} {
+             margin-left: -90px;
+         }
+         & ul {
+              & li {
+                   list-style: none;
+                   display: flex;
+                   align-items: center;
+                   gap: 10px;
+                   margin-bottom: 17px;
+                   font-weight: var(--wt-fw-medium);
+                   font-size: 18px;
+                   @media #{$xs} {
+                         font-size: 14px;
+                   }
+                   &:last-child {
+                        margin-bottom: 0;
+                   }
+                    & span {
+                    display: inline-block;
+                    line-height: 1;
+                    font-size: 20px;
+                    & i {
+                         line-height: 1;
+                         display: inline-block;
+                    }
+               }
+              }
+         }
+    }  
+}
+
