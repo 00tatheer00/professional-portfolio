@@ -63,7 +63,7 @@ This project is licensed under the **[MIT License](LICENSE)** – Free to use, m
 
 ## 📬 Let's Connect! 🌍
 📧 Email: **tatheerabidi00@gmail.com**  
-💼 LinkedIn: [[Your LinkedIn Profile](https://www.linkedin.com/in/tatheer-hussain/)](#)  
-🐙 GitHub: [Your GitHub Profile](https://github.com/00tatheer00)  
+💼 LinkedIn: (https://www.linkedin.com/in/tatheer-hussain/)(#)  
+🐙 GitHub: (https://github.com/00tatheer00)  
 
 🚀 **Thank you for checking out my portfolio!** Hope you love it as much as I do! 😃
