@@ -47,7 +47,7 @@ Welcome to my **stunning** personal portfolio repository! 🚀 This isn't just a
 ---
 
 ## 🌐 Live Demo (Prepare to be Amazed!) 🔥
-Check out my portfolio in action: **[Live Portfolio Link](#)**
+Check out my portfolio in action: **[Live Portfolio Link](https://tatheer.vercel.app/)**
 
 ---
 
